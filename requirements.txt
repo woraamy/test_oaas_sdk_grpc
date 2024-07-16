@@ -1,6 +1,6 @@
 oaas-sdk-py
 grpcio
 grpcio-tools
-oaas-sdk-grpc
+oaas-sdk-grpc==0.0.3
 aiohttp~=3.9.5
 protobuf
