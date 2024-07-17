@@ -48,4 +48,4 @@ COPY . .
 EXPOSE 50052
 
 # Run the application.
-CMD python3 -m prime_function.prime_server
+CMD python3 -m prime_server

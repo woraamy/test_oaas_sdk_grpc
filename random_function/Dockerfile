@@ -49,4 +49,4 @@ COPY . .
 EXPOSE 50052
 
 # Run the application.
-CMD python3 -m random_function.random_server
+CMD python3 -m random_server
