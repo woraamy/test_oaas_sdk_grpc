@@ -33,7 +33,7 @@ jobs:
             type=ref,event=tag,enable=true,priority=600
             type=ref,event=pr,prefix=pr-,enable=true,priority=600
       - name: Login to ghcr.io
-        if: .github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
