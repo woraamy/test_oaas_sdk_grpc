@@ -16,7 +16,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR /concat_function
 
 # Create a non-privileged user that the app will run under.
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
@@ -48,5 +48,5 @@ COPY . .
 EXPOSE 8080
 
 # Run the application.
-CMD python -m concat_function.concat_server
+CMD python -m concat_server
 
