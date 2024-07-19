@@ -22,8 +22,7 @@ class ConcatHandler:
         inplace = ctx.args.get('INPLACE', 'false').lower() == 'true'
         req_ts = int(ctx.args.get('reqts', '0'))
 
-        record = json.loads(ctx.task.main.data) if ctx.task.main.data is not None and len(
-            ctx.task.main.data) != 0 else {}
+        record = ctx.copy_main_data()
 
         if req_ts != 0:
             record['reqts'] = req_ts

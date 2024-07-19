@@ -33,8 +33,7 @@ class RandomHandler(oaas.Handler):
         req_ts = int(ctx.args.get('reqts', '0'))
 
         # Copy a record from the main object if it exists
-        record = json.loads(ctx.task.main.data) if ctx.task.main.data is not None and len(
-            ctx.task.main.data) != 0 else {}
+        record = ctx.copy_main_data()
 
         # Generate a random record
         for _ in range(entries):
